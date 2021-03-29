@@ -27,7 +27,6 @@ var getResults = function (query) {
     });
 };
 
-// TODO: 
 var displayResults = function (results) {
     if (results.length === 0) {
         resultsContainerEl.textContent = 'This query has no results. Please search again.';
@@ -59,7 +58,6 @@ var displayResults = function (results) {
     }
 };
 
-// TODO: create 'No Results' function
-
+// TODO: create 'No Results' function???
 
 getSearchQuery();
