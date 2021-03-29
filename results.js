@@ -1,4 +1,7 @@
+// TODO: Add 'query-name' as ID to URL
 var queryNameEl = document.querySelector('#query-name');
+// TODO: Add 'results-container' as ID to results section
+var resultsContainerEl = document.querySelector('#results-container')
 
 var getSearchQuery = function () {
     var queryString = document.location.search;
@@ -20,14 +23,20 @@ var getResults = function (query) {
             response.json().then(function(data) {
                 displayResults(query);
             });
-        
         };
     });
 };
 
 // TODO: 
 var displayResults = function (results) {
+    if (results.length === 0) {
 
+    }
+    for (var i = 0; i < results.length; i++) {
+        // Need to add title, date(year), subjects, description, and link to 'read more'
+        var titleEl = document.createAttribute('span');
+        titleEl.textContent = results[i].title;        
+    }
 }
 
 // TODO: create 'No Results' function
